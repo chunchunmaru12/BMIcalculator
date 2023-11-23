@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        header{
+            height: 75px;
+            text-align: center;
+            font-size: 70px;
+            
+            color:white;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: justify;
+            background-image: url("image/nature.jpg");
+            background-size: cover;
+        }
+        .box{
+            width: 75%;
+        }
+        input {
+            padding: 20px;
+            font-size: 18px;
+            margin: 10px;
+            width: 200px;
+            text-decoration: none;
+            border: 10px;
+            border-radius: 10px;
+            background-color: brown;
+        }
+        input:hover{
+            background-color: pink;
+            cursor: pointer;
+        }
+        .container {
+            
+            padding: 20px;
+            background: transparent;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px);
+        }
+
+        h1 {
+            color: #333333;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .healthy {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        .underweight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .overweight {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .obese {
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .main{
+            display: flex;
+        }   
+        .log{
+            top:500px;
+            left:800px;
+            position: absolute;
+        }
+        .reg{
+            top:500px;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        BMI Calculator
+    </header>
+    <div class="main">
+ <div class="container">
+        <h1>Body Mass Index (BMI)</h1>
+        <p>
+            BMI, which stands for <span class="healthy">Body Mass Index</span>, 
+            measures the amount of body fat based on a person's weight and height. According to the 
+            <span class="healthy">World Health Organization (WHO)</span>, the standard BMI values are as follows:
+        </p>
+        <ul>
+            <li><span class="healthy">18.5 to 24.9:</span>
+            A person's body height and weight ratio is considered 
+            <span class="healthy">healthy</span> within this range.</li>
+            <li><span class="underweight">Less than 18.5:</span> 
+            Indicates a very skinny and <span class="underweight">underweight</span> 
+            person who may need to increase their calorie and carbohydrate intake.</li>
+            <li><span class="overweight">25 to 29.9:</span> Indicates that the person is
+            <span class="overweight">overweight</span>.</li>
+            <li><span class="obese">30 or greater:</span> 
+            Considered very dangerous, and such a person can be classified as <span class="obese">obese</span>.</li>
+        </ul>
+    </div>
+    <div class="log">
+        <p>Already an User? Log in here</p>
+        <input type="submit" name="login" id=""value="Log In">
+    </div>
+    <div class="reg">
+        <p>Want to know your BMI? register now</p>
+        <input type="submit" name="Register" id="" value="Register">
+    </div>
+<div class="img">
+    <img src="/image/bmi.jpg" alt="" width="400px">
+</div>
+</div>
+</body>
+</html>
+
