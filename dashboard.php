@@ -1,78 +1,7 @@
 <html lang="en">
 <head>
     <title>Document</title>
-    <style>
-        *{
-            margin:0;
-        }
-        body{
-            background-color:gray;
-        }
-        header{
-            border: 1px solid;
-            padding:20px;
-            background-color: #B7C0EE;
-        }
-        .wlc{
-            font-size:20px;
-            text-align: center;
-        }
-        a:link{
-            color:black;
-            text-decoration:none;
-            margin:2px;
-        }
-        a:visited{
-            color:black;
-        }
-        a:hover{
-            background-color:white;
-            
-        }
-        .user{
-            float:right;
-        }
-        input[type=number],select{
-            width: 20%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            border:1px solid;
-            border-radius:5px;
-            
-        }
-        label{
-            margin-left:30%;
-        }
-        .submit{
-            margin-left:40%;
-            width: 20%;
-            padding: 12px 20px;
-            border:0 solid;
-            border-radius:5px;
-        }
-        input[type="submit"]{
-            padding:10px;
-            border-radius:5px;
-        }
-        input[type=submit]:hover{
-            background-color:#0B1D51;
-            color:white;
-            border:0 solid;
-            cursor:pointer;
-            
-        }
-        select:hover{
-            background-color:#0B1D51;
-            color:white;
-            border:0 solid;
-            cursor: pointer;
-        }
-        ::selection{
-            color:white;
-            background-color:red;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
@@ -126,6 +55,9 @@
 include 'dbconnect.php';
 require_once 'insertFirst.php';
 $currentUser=$_SESSION['username'];
+if(!$currentUser){
+    header('Location:login.php');
+}
 if($status){
     $sql="INSERT INTO user_data(user,bmi,message,height,height_unit,weight,weight_unit) values('$currentUser',0,'',0,'',0,'');";
     $result=mysqli_query($conn,$sql);

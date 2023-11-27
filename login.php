@@ -172,13 +172,14 @@ if(isset($_POST['submit'])){
     $username = $_POST['uname'];
     $password = $_POST['psw'];
     session_start();
-    $_SESSION['username'] = $username;
     include 'dbconnect.php';
 
     $sql = "SELECT * FROM register WHERE username='$username' AND password='$password'";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
+            $_SESSION['username'] = $username;
+
             echo "Login successful!";
             header('Location:dashboard.php');
         } else {
